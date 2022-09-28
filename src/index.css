@@ -1,13 +1,74 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img{
+  max-width: 100%;
+}
+
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 20px;
+  background-color: #202D36;
+}
+ .countries .top{
+  height: 160px;
+ }
+.countries article img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.countries{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  color: white;
+}
+.countries .content{
+  background-color: #2B3743;
+  padding: 30px 25px 45px 25px;
+  margin-top: -10px;
+  border-radius: 5px;
+}
+.countries .content h3{
+  padding-bottom: 15px;
+}
+.countries .content p{
+  padding-bottom: 5px;
+}
+.countries .content p span{
+  font-weight: 600;
+}
+@media screen and (min-width: 640px) {
+  .countries{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .countries{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  .countries{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .countries article{
+    width: 265px;
+  }
+  .wrapper{
+    width: 100%;
+  }
+
+  .countries article img{
+    width: 100%;
+    max-height: 365px;
+  }
 }
