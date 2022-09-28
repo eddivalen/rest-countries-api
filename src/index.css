@@ -31,8 +31,11 @@ body{
   gap: 40px;
   color: white;
 }
-.countries .content{
+.countries .wrapper{
   background-color: #2B3743;
+  max-height: 350px;
+}
+.countries .content{
   padding: 30px 25px 45px 25px;
   margin-top: -10px;
   border-radius: 5px;
@@ -62,9 +65,7 @@ body{
   }
   .countries article{
     width: 265px;
-  }
-  .wrapper{
-    width: 100%;
+    max-height: 350px;
   }
 
   .countries article img{
