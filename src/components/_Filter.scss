@@ -1,0 +1,60 @@
+.filter{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 25px;
+  width: 100%;
+  &__form-control{
+    width: 100%;
+    margin-bottom: 40px;
+    input{
+      background-color: $dark-element-color;
+      border-radius: 5px;
+      border: none;
+      color: $dark-element-color;
+      color: $dark-text-color;
+      font-family: inherit;
+      height: 48px;
+      outline: none;
+      padding-left: 75px;
+      width: 100%;
+    }
+    input::placeholder{
+      color: $dark-text-color;
+    }
+  }
+  &__region-filter{
+    width: 200px;
+    .select{
+      background-color: $dark-element-color;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 18px 2px rgb(0 0 0 / 10%);
+      color: $dark-text-color;
+      font-family: inherit;
+      height: 48px;
+      outline: none;
+      padding-left: 25px;
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 640px) {
+    &__form-control{
+      width: 482px;
+    }
+  }
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+    justify-content: space-between;
+    &__form-control{
+      width: 360px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &__form-control{
+      width: 482px;
+    }
+  }
+
+}

@@ -1,13 +1,14 @@
-import React from 'react'
+ import React from 'react'
 
 const Filter = () => {
   return (
     <section className="filter">
-      <form action="" className="form-control">
+      <form action="" className="filter__form-control">
         <input type="search" name="search" id="search" placeholder='Search for a country...' />
       </form>
-      <div>
+      <div className='filter__region-filter'>
         <select name="select" id="select" className="select">
+          <option value="" disabled defaultValue={'Filter by region'} hidden></option>
           <option value="Africa">Africa</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>

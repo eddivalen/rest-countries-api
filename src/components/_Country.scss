@@ -1,0 +1,40 @@
+.country{
+  &__wrapper{
+    padding: 0 16px;
+    margin-top: 80px;
+    &__content{
+      margin-top: 100px;
+      .flag{
+        
+      }
+      .info{
+        color: $dark-text-color;
+        .info__left,.info__right{
+          p{
+            span{
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn{
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: $dark-text-color;
+    border-radius: 4px;
+    background-color: $dark-element-color;
+    transition: background-color 0.2s;
+  }
+  .btn:hover {
+    background-color: $dark-text-color;
+    color: $dark-bg-color;
+  }
+  .btn-light{
+    margin-top: 80px;
+    align-self: flex-start;
+  }
+
+}
