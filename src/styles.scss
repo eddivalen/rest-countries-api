@@ -19,6 +19,10 @@ body{
   background-color: $dark-bg-color;
   font-family: 'Nunito Sans', sans-serif;
 }
+a{
+  text-decoration: none;
+  display: inline-block;
+}
 .container{
   align-items: center;
   display: flex;
