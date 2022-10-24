@@ -1,18 +1,54 @@
 .country{
   &__wrapper{
     padding: 0 16px;
-    margin-top: 80px;
+    margin-top: 40px;
     &__content{
-      margin-top: 100px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
       .flag{
-        
+        width: 320px;
+        height: 230px;
+        img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
       }
       .info{
         color: $dark-text-color;
-        .info__left,.info__right{
-          p{
-            span{
-              font-weight: 600;
+        h3{
+          font-family: inherit;
+          margin-top: 40px;
+          margin-bottom: 30px;
+          font-weight: 800;
+          font-size: 24px;
+        }
+        &__wrapper{
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          margin-bottom: 50px;
+          &__left,&__right{
+            p{
+              font-size: 15px;
+              margin: 5px 0;
+              span{
+                font-weight: 600;
+              }
+            }
+          }
+        }
+        &__border-countries{
+
+          &__countries{
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            a{
+              text-decoration: none;
+              color: $dark-text-color;
             }
           }
         }
@@ -20,21 +56,79 @@
     }
   }
   .btn{
-    padding: 5px;
+    padding: 1px 6px;
+    min-width: 97px;
     cursor: pointer;
     text-decoration: none;
     color: $dark-text-color;
     border-radius: 4px;
     background-color: $dark-element-color;
     transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    box-shadow: 0 0 18px 2px rgb(0 0 0 / 10%);
+    span{
+      margin-left: 10px;
+    }
   }
   .btn:hover {
     background-color: $dark-text-color;
     color: $dark-bg-color;
+    text-decoration: none;
   }
   .btn-light{
-    margin-top: 80px;
     align-self: flex-start;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__wrapper{
+      &__content{
+        flex-direction: row;
+        gap: 80px;
+        .flag{
+          min-width: 320px;
+        }
+        .info{
+          
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 900px) {
+    width: 100%;
+
+    &__wrapper{
+      width: 100%;
+      &__content{
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 100px;
+        .info{
+          &__wrapper{
+            flex-direction: row;
+          }
+          &__border-countries{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1200px){
+    &__wrapper{
+      &__content{
+        .flag{
+          height: 400px;
+          width: 560px;
+        }
+      }
+    }
   }
 
 }
