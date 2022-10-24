@@ -1,31 +1,22 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import getCountries from '../api/getCountries';
 
 const Countries = () => {
-  const [countries, setCountries] = useState([]);
+  const { data: countries, status} = useQuery(['countries'], getCountries);
+
+  if (status === "loading") return <p>Loading...</p>;
+  if (status === "error") return <p>Error :(</p>;
   
-  // fetch countries from API
-  const fetchCountries = async () => {
-    await fetch(process.env.REACT_APP_API_URL+`all`)
-    .then((res) => res.json())
-    .then((data) => {
-      setCountries(data);
-    })
-  }
-
-  useEffect( () => {
-    fetchCountries()
-  }, [])
-
-
   return (
     <>
     <section className='countries'>
       { countries.map((country) => {
-        const { name, population, region, capital, flags, flag} = country;
+        const { name, population, region, capital, flags, cca2: countryCode} = country;
         const cap = typeof capital != 'undefined' ? capital[0] : '';
         return (
-          <Link to={`/countries/${name.common}`} key={flag}>
+          <Link to={`/country/${countryCode.toLowerCase()}`} key={countryCode}>
             <article>
               <div className='wrapper'>
                 <div className="wrapper__top">
@@ -44,7 +35,7 @@ const Countries = () => {
       })}
     </section>
     </>
-  )
+  ) 
 }
 
 export default Countries
