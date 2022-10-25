@@ -1,5 +1,5 @@
 .countries{
-  color: $dark-text-color;
+  color: var(--text-color);
   display: grid;
   gap: 75px;
   grid-template-columns: 265px;
@@ -11,7 +11,7 @@
   }
   article{
     .wrapper{
-      background-color: $dark-element-color;
+      background-color: var(--element-color);
       border-radius: 5px;
       box-shadow: 0 0 18px 2px rgb(0 0 0 / 10%);
       max-height: 350px;

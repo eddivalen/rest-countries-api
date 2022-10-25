@@ -8,12 +8,23 @@
   &__form-control{
     width: 100%;
     margin-bottom: 40px;
+    position: relative;
+    svg{
+      position: absolute;
+      left: 30px;
+      bottom: 15px;
+      font-size: 15px;
+      path{
+        fill: var(--text-color);
+      }
+    }
     input{
-      background-color: $dark-element-color;
+      background-color: var(--element-color);
+      box-shadow: 0 0 18px 2px rgb(0 0 0 / 10%);
       border-radius: 5px;
       border: none;
-      color: $dark-element-color;
-      color: $dark-text-color;
+      color: var(--element-color);
+      color: var(--text-color);
       font-family: inherit;
       height: 48px;
       outline: none;
@@ -21,17 +32,17 @@
       width: 100%;
     }
     input::placeholder{
-      color: $dark-text-color;
+      color: var(--text-color);
     }
   }
   &__region-filter{
     width: 200px;
     .select{
-      background-color: $dark-element-color;
+      background-color: var(--element-color);
       border-radius: 5px;
       border: none;
       box-shadow: 0 0 18px 2px rgb(0 0 0 / 10%);
-      color: $dark-text-color;
+      color: var(--text-color);
       font-family: inherit;
       height: 48px;
       outline: none;
@@ -40,8 +51,9 @@
     }
   }
   @media screen and (min-width: 640px) {
+    min-width: 605px;
     &__form-control{
-      width: 482px;
+      width: 480px;
     }
   }
   @media screen and (min-width: 768px){
@@ -53,7 +65,7 @@
   }
   @media screen and (min-width: 992px) {
     &__form-control{
-      width: 482px;
+      width: 480px;
     }
   }
 

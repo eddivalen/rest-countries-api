@@ -16,7 +16,7 @@
         }
       }
       .info{
-        color: $dark-text-color;
+        color: var(--text-color);
         h3{
           font-family: inherit;
           margin-top: 40px;
@@ -48,7 +48,7 @@
             flex-wrap: wrap;
             a{
               text-decoration: none;
-              color: $dark-text-color;
+              color: var(--text-color);
             }
           }
         }
@@ -60,9 +60,9 @@
     min-width: 97px;
     cursor: pointer;
     text-decoration: none;
-    color: $dark-text-color;
+    color: var(--text-color);
     border-radius: 4px;
-    background-color: $dark-element-color;
+    background-color: var(--element-color);
     transition: background-color 0.2s;
     display: flex;
     justify-content: center;
@@ -74,8 +74,8 @@
     }
   }
   .btn:hover {
-    background-color: $dark-text-color;
-    color: $dark-bg-color;
+    background-color: var(--text-color);
+    color: var(--bg-color);
     text-decoration: none;
   }
   .btn-light{

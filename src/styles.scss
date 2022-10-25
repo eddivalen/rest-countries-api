@@ -11,12 +11,18 @@
   padding: 0;
 }
 
+.light{
+  --bg-color: #{$light-bg-color};
+  --element-color: #{$light-element-color};
+  --text-color: #{$light-text-color};
+}
+
 img{
   max-width: 100%;
 }
 
 body{
-  background-color: $dark-bg-color;
+  background-color: var(--bg-color);
   font-family: 'Nunito Sans', sans-serif;
 }
 a{

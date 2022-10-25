@@ -1,6 +1,7 @@
 .header{
-  background-color: $dark-element-color;
-  color: $dark-text-color;
+  background-color: var(--element-color);
+  box-shadow: 0 0 18px 2px rgb(0 0 0 / 10%);
+  color: var(--text-color);
   height: 80px;
   padding: 0 16px;
   &__wrapper{
@@ -19,6 +20,7 @@
     &__theme-switcher{
       font-size: 14px;
       font-weight: 600;
+      cursor: pointer;
     }
   }
   @media screen and (min-width: 640px) {
