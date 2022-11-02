@@ -24,6 +24,7 @@ img{
 body{
   background-color: var(--bg-color);
   font-family: 'Nunito Sans', sans-serif;
+  transition: background-color 0.2s;
 }
 a{
   text-decoration: none;

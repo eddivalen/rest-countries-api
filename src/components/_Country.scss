@@ -9,6 +9,7 @@
       .flag{
         width: 320px;
         height: 230px;
+        box-shadow: 0 0 18px 2px rgb(0 0 0 / 10%);
         img{
           height: 100%;
           width: 100%;
@@ -112,9 +113,12 @@
           &__border-countries{
             display: flex;
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: baseline;
             gap: 20px;
+            h4{
+              min-width: fit-content;
+            }
           }
         }
       }
@@ -126,6 +130,7 @@
         .flag{
           height: 400px;
           width: 560px;
+          min-width: 560px;
         }
       }
     }
