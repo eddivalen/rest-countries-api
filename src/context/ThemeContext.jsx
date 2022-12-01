@@ -4,7 +4,6 @@ const ThemeContext = createContext({});
 
 let reducer = (theme, newTheme) => {
   if(newTheme == null){
-    console.log('new theme null')
     localStorage.removeItem('template');
     return initialState;
   }

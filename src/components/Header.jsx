@@ -11,10 +11,10 @@ const Header = () => {
   }
 
   useEffect( () => {
-    if(theme.theme == 'light'){
+    if(theme.theme === 'light'){
       document.body.classList.add('light');
     }
-    if(theme.theme == 'dark'){
+    if(theme.theme === 'dark'){
       document.body.classList.remove('light');
     }
   },[theme]);
