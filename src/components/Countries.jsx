@@ -1,14 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import getCountries from '../api/getCountries';
 
-const Countries = () => {
-  const { data: countries, status} = useQuery(['countries'], getCountries);
+const Countries = ({countries}) => {
 
-  if (status === "loading") return <p>Loading...</p>;
-  if (status === "error") return <p>Error :(</p>;
-  
   return (
     <>
     <section className='countries'>
