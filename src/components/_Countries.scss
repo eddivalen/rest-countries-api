@@ -10,6 +10,10 @@
     text-decoration: none;
   }
   article{
+    transition: transform 300ms ease-in-out;
+    &:hover{
+      transform: scale(1.04);
+    }
     .wrapper{
       background-color: var(--element-color);
       border-radius: 5px;
