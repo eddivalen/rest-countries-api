@@ -6,7 +6,7 @@ const Countries = ({countries}) => {
   return (
     <>
       <section className='countries'>
-        { countries.map((country) => {
+        {countries && countries.length > 0 ? countries.map((country) => {
           const { name, population, region, capital, flags, cca2: countryCode} = country;
           const cap = typeof capital != 'undefined' ? capital[0] : '';
           return (
@@ -26,7 +26,9 @@ const Countries = ({countries}) => {
               </article>
             </Link>
           )
-        })}
+        }) : 
+          <div>No results found</div>
+        }
       </section>
     </>
   ) 
