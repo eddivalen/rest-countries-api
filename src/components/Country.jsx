@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +10,6 @@ import { useQueryClient } from "@tanstack/react-query";
 
 const Country = () => {
   const queryClient = useQueryClient();
- // const [country, setCountry] = useState([]);
   let country = {}
   let borders = [];
   const { countryCode } = useParams();
@@ -30,29 +29,6 @@ const Country = () => {
         return {name: item.name.common, countryCode: item.cca2.toLowerCase()}
       });
   }
-  console.log(country)
-  /* if (status === "loading") return <p>Loading...</p>;
-  if (status === "error") return <p>Error :(</p>  */
-  /* const result = useQuery(['countries', countryCode], getCountries, {
-    initialData: () => {
-      
-      // Use a todo from the 'todos' query as the initial data for this todo query
-      return queryClient.fetchQuery(['countries'])//?.find(d => d.cca2.toLowerCase() === countryCode)
-    },
-  }) */
-  /* useEffect( () => {
-    const fetchCountryData = async () => {
-      // eslint-disable-next-line no-useless-concat
-      await fetch(process.env.REACT_APP_API_URL+`alpha`+`/${countryCode}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setCountry(data[0]);
-      })
-    
-    }
-    fetchCountryData()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]) */
 
   return (
     <>

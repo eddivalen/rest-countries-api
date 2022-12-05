@@ -4,12 +4,13 @@
   color: var(--text-color);
   height: 80px;
   padding: 0 16px;
+  width: 100%;
+
   &__wrapper{
     align-items: center;
     display: flex;
     height: 100%;
     justify-content: space-between;
-    margin: 0 auto;
     max-width: 1440px;
     &__title{
       h1{
@@ -34,6 +35,11 @@
       &__theme-switcher{
         font-size: 16px;
       }
+    }
+  }
+  @media screen and (min-width: 1440px){
+    &__wrapper{
+      margin: 0 auto;
     }
   }
 }

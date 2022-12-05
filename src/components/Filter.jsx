@@ -80,7 +80,6 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
         </select>
-      
       </div>
     </section>
   )
