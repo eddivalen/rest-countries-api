@@ -7,7 +7,7 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
   const handleSearchByCountry = (value) => {
     setSearchByCountry(value);
     if(value){
-      if(searchByRegion.length > 0 && searchByRegion != 'All'){
+      if(searchByRegion.length > 0 && searchByRegion !== 'All'){
         filterByCountry(value,true);
       }else{
         filterByCountry(value,false);
@@ -23,7 +23,7 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
   }
   const handleSearchByRegion = (value) => {
     setSearchByRegion(value);
-    if(value == 'All'){
+    if(value === 'All'){
       if(searchByCountry.length > 0){
         filterByCountry(searchByCountry,false);
       }else{
@@ -38,6 +38,7 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
       }
     }
   }
+
   const filterByCountry = (value, byRegion) => {
     if(byRegion){
       const filteredCountries = countries.filter( (country) =>
