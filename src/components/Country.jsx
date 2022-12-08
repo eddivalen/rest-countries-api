@@ -6,8 +6,6 @@ import { useQuery } from '@tanstack/react-query';
 import getCountries from '../api/getCountries';
 import { useQueryClient } from "@tanstack/react-query";
 
-
-
 const Country = () => {
   const queryClient = useQueryClient();
   let country = {}
@@ -37,7 +35,7 @@ const Country = () => {
         <>
         <article className='country'>
           <div className='country__wrapper'>
-            <Link className='' to="/">
+            <Link to="/">
               <div className='btn btn-light'><FontAwesomeIcon icon={faArrowLeft}/> <span>Back</span></div>
             </Link>
             <section className='country__wrapper__content'>
@@ -48,7 +46,7 @@ const Country = () => {
                   <h3>{country.name.common}</h3>
                   <div className="info__wrapper">
                     <div className="info__wrapper__left">
-                      <p><span>Native Name:</span> {Object.values(country.name.nativeName)[0].official}</p>
+                      <p><span>Native Name:</span> {country.name.common}</p>
                       <p><span>Population:</span> {country.population}</p>
                       <p><span>Region:</span> {country.region}</p>
                       <p><span>Capital:</span> {country.region}</p>
