@@ -72,26 +72,26 @@ Users should be able to:
 
 ### What I learned
 
-- How to reduce the number of requests made when using React Query.
-- React Query's caching feature has made managing the state of my app much simpler and more efficient.
-- 
+- How to effectively minimize the number of API requests made with React Query.
+- Using React Query's caching feature has been a game-changer for managing the state of my app - it's much simpler and more efficient now.
+- How to use React Context API and use persisted state to manage the state of the theme switcher.
 
+Consider the following flow:
+- 1. User visits the home page
+- 2. User clicks on a country to view its details
+- 3. User clicks on back button to return to home page
+- 4. User clicks on a different country to view its details
+- 5. User clicks on back button to return to home page
+- 6. User clicks on a different country to view its details
 
-To see how you can add code snippets, see below:
+Screenshot of API requests before using React Query:
+![before-react-query](./src/images/before-react-query.jpg)
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+Screenshot of API requests after using React Query:
+![after-react-query](./src/images/after-react-query.jpg)
+
+As you can see, the number of API requests is incremental before using React Query. Without React Query a new API request is made every time the user visits the home or the country details page. After using React Query, the number of API requests has been reduced to 1. This is because React Query caches the data from the first API request, and uses it for the subsequent requests.
+
 
 ### Continued development
 
@@ -100,8 +100,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [How to build an app with React Query](https://www.commoninja.com/blog/how-to-build-an-app-with-react-query) - This helped me for understanding how to use React Query in order to fecth data and manage states.
+- [Global Cached State in React using Hooks, Context, and Local Storage](https://medium.com/@akrush95/global-cached-state-in-react-using-hooks-context-and-local-storage-166eacf8ab46) - I found this article to be incredibly helpful in finally understanding how to use the Context API and Local Storage to manage global state in React.
 
 ## Author
 
@@ -110,6 +110,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+[Midudev](https://youtube.com/midudev) has been a great inspiration to me, his videos are packed with valuable information and he always motivates people by saying the phrase "A mover las manitas" which means "Let's get to work and make things happen!". I highly recommend you to check out his channel.
