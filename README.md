@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend mentor solution](https://your-solution-url.com)
+- Solution URL: [Frontend mentor solution](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-GuP5EiQpx-)
 - Live Site URL: [Live site](https://rest-countries-api-eddivalen.vercel.app/)
 
 ## My process
