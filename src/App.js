@@ -25,7 +25,7 @@ function App() {
             <Header/>
             <Routes>
               <Route exact path="/" element={
-                  <div className="container">
+                  <main role="main" className="container">
                     <Filter 
                       countries={countries} 
                       setFilteredCountries={setFilteredCountries} 
@@ -35,13 +35,13 @@ function App() {
                       searchByRegion={searchByRegion}
                     />
                     <Countries countries={searchByRegion.length > 0 || searchByCountry.length > 0 ? filteredCountries : countries} />
-                  </div>
+                  </main>
               }>
               </Route>
               <Route path="/country/:countryCode" element={
-                <div className='container'>
+                <main role="main" className='container'>
                   <Country/>
-                </div>
+                </main>
               }></Route>
             </Routes>
         </Router>

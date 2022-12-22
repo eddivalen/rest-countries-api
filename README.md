@@ -77,18 +77,18 @@ Users should be able to:
 - How to use React Context API and use persisted state to manage the state of the theme switcher.
 
 Consider the following flow:
-- 1. User visits the home page
-- 2. User clicks on a country to view its details
-- 3. User clicks on back button to return to home page
-- 4. User clicks on a different country to view its details
-- 5. User clicks on back button to return to home page
-- 6. User clicks on a different country to view its details
+1. User visits the home page
+2. User clicks on a country to view its details
+3. User clicks on back button to return to home page
+4. User clicks on a different country to view its details
+5. User clicks on back button to return to home page
+6. User clicks on a different country to view its details
 
 Screenshot of API requests before using React Query:
-![before-react-query](./src/images/before-react-query.jpg)
+![before-react-query](./src/images/before-react-query.png)
 
 Screenshot of API requests after using React Query:
-![after-react-query](./src/images/after-react-query.jpg)
+![after-react-query](./src/images/after-react-query.png)
 
 As you can see, the number of API requests is incremental before using React Query. Without React Query a new API request is made every time the user visits the home or the country details page. After using React Query, the number of API requests has been reduced to 1. This is because React Query caches the data from the first API request, and uses it for the subsequent requests.
 

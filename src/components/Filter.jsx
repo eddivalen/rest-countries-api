@@ -72,7 +72,7 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
         <input type="search" name="search" id="search" placeholder='Search for a country...' onChange={(e) => handleSearchByCountry(e.target.value)} />
       </form>
       <div className='filter__region-filter'>
-        <select name="select" id="select" defaultValue={'Filter by region'} className="select" onChange={(e) => handleSearchByRegion(e.target.value)}>
+        <select aria-label='Filter by region' name="select" id="select" defaultValue={'Filter by region'} className="select" onChange={(e) => handleSearchByRegion(e.target.value)}>
           <option value="Filter by region" disabled hidden>Filter by Region</option>
           <option value="All">All</option>
           <option value="Africa">Africa</option>
