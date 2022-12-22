@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Screenshot
 
-![dark-screenshot](./src/images/dark-screenshot.jpg)
-![light-screenshot](./src/images/light-screenshot.jpg)
+![dark-screenshot](./src/images/dark-screenshot.png)
+![light-screenshot](./src/images/light-screenshot.png)
 
 ### Links
 
