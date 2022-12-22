@@ -20,7 +20,7 @@ const Header = () => {
   },[theme]);
 
   return (
-    <header role="navigation" className="header">
+    <header role="banner" className="header">
       <div className="header__wrapper">
         <div className='header__wrapper__title'>
           <h1>Where in the world?</h1>
