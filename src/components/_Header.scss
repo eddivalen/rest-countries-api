@@ -6,6 +6,10 @@
   padding: 0 16px;
   width: 100%;
 
+  a{
+    text-decoration: none;
+    color: var(--text-color);
+  }
   &__wrapper{
     align-items: center;
     display: flex;

@@ -22,11 +22,13 @@ const Header = () => {
   return (
     <header role="banner" className="header">
       <div className="header__wrapper">
-        <div className='header__wrapper__title'>
-          <h1>Where in the world?</h1>
-        </div>
+        <a href="/">
+          <div className='header__wrapper__title'>
+            <h1>Where in the world?</h1>
+          </div>
+        </a>
         <div className='header__wrapper__theme-switcher' onClick={ () => switchTheme( theme.theme === 'dark' ? 'light' : 'dark')}>
-            <FontAwesomeIcon icon={theme.theme === 'dark' ? faMoon : faSun}/>  {theme.theme === 'dark' ? 'Dark mode' : 'Light mode'}
+            <FontAwesomeIcon icon={theme.theme === 'dark' ? faSun : faMoon}/>  {theme.theme === 'dark' ? 'Light mode' : 'Dark mode'}
         </div>
       </div>
     </header>
