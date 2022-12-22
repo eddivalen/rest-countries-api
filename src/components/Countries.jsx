@@ -17,7 +17,7 @@ const Countries = ({countries}) => {
                     <img src={flags.svg} alt={`Flag of ${name.common}`}/>
                   </div>
                   <div className='wrapper__content'>
-                    <h3>{name.common}</h3>
+                    <h2>{name.common}</h2>
                     <p><span>Population:</span> {population}</p>
                     <p><span>Region:</span> {region}</p>
                     {cap.length > 0 && <p><span>Capital:</span> {cap}</p>} 

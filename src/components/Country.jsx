@@ -43,7 +43,7 @@ const Country = () => {
                 <img src={country.flags.svg} alt={`Flag of ${country.name.common}`} />
                 </div>
                 <div className="info">
-                  <h3>{country.name.common}</h3>
+                  <h2>{country.name.common}</h2>
                   <div className="info__wrapper">
                     <div className="info__wrapper__left">
                       <p><span>Native Name:</span> {country.name.common}</p>
