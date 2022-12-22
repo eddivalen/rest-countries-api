@@ -53,7 +53,9 @@ const Country = () => {
                     </div>
                     <div className="info__wrapper__right">
                       <p><span>Top Level Domain:</span> {country.tld}</p>
-                      <p><span>Currencies:</span> {Object.values(country.currencies).map((cur) => cur.name).join(', ')}</p>
+                      {country.currencies && 
+                        <p><span>Currencies:</span> {Object.values(country.currencies).map((cur) => cur.name).join(', ')}</p>
+                      }
                       <p><span>Languages:</span> {Object.values(country.languages).join(', ')}</p>
                     </div>
                   </div>
