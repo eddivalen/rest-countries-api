@@ -55,8 +55,8 @@ Users should be able to:
 - ~~Add React Query~~
 - ~~Add Dark/Light Switcher~~
 - ~~Add loading spinner~~
+- ~~Sort countries alphabetically~~
 - Tooltip for theme switcher
-- Sort countries alphabetically
 - migrate create-react-app to Vite
 - Add tests
 ### Built with
