@@ -69,7 +69,7 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
     <section className="filter">
       <form action="" className="filter__form-control">
         <FontAwesomeIcon icon={faSearch}/>
-        <input type="search" name="search" id="search" title='Search for a country' aria-label='Search for a country' placeholder='Search for a country...' onChange={(e) => handleSearchByCountry(e.target.value)} />
+        <input type="search" name="search" value={searchByCountry} id="search" title='Search for a country' aria-label='Search for a country' placeholder='Search for a country...' onChange={(e) => handleSearchByCountry(e.target.value)} />
       </form>
       <div className='filter__region-filter'>
         <select aria-label='Filter by region' name="select" id="select" defaultValue={'Filter by region'} className="select" onChange={(e) => handleSearchByRegion(e.target.value)}>
