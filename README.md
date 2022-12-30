@@ -54,9 +54,9 @@ Users should be able to:
 - ~~Add environment variable~~
 - ~~Add React Query~~
 - ~~Add Dark/Light Switcher~~
+- ~~Add loading spinner~~
 - Tooltip for theme switcher
 - Sort countries alphabetically
-- Add loading spinner
 - migrate create-react-app to Vite
 - Add tests
 ### Built with
