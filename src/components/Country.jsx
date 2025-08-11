@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useQuery } from '@tanstack/react-query';
-import getCountries from '../api/getCountries';
+import { getCountries, getCountryLanguages } from '../api/getCountries';
 import { useQueryClient } from "@tanstack/react-query";
 
 const Country = () => {
@@ -17,6 +17,17 @@ const Country = () => {
       return queryClient.getQueryData(['countries'])
     }
   });
+
+  // Fetch only languages for this specific country
+  const { data: languagesData } = useQuery(
+    ['countryLanguages', countryCode], 
+    () => getCountryLanguages(countryCode.toUpperCase()),
+    {
+      enabled: !!countryCode,
+      staleTime: 1000 * 60 * 5, // Cache for 5 minutes
+    }
+  );
+
   if (status === "loading") return <p>Loading...</p>;
   if (status === "error") return <p>Error :(</p>;
   if (status === "success"){
@@ -56,8 +67,8 @@ const Country = () => {
                       {country.currencies && 
                         <p><span>Currencies:</span> {Object.values(country.currencies).map((cur) => cur.name).join(', ')}</p>
                       }
-                      {country.languages && 
-                        <p><span>Languages:</span> {Object.values(country.languages).join(', ')}</p>
+                      {languagesData && languagesData.languages && 
+                        <p><span>Languages:</span> {Object.values(languagesData.languages).join(', ')}</p>
                       }
                     </div>
                   </div>
