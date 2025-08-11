@@ -56,7 +56,9 @@ const Country = () => {
                       {country.currencies && 
                         <p><span>Currencies:</span> {Object.values(country.currencies).map((cur) => cur.name).join(', ')}</p>
                       }
-                      <p><span>Languages:</span> {Object.values(country.languages).join(', ')}</p>
+                      {country.languages && 
+                        <p><span>Languages:</span> {Object.values(country.languages).join(', ')}</p>
+                      }
                     </div>
                   </div>
                   { borders.length > 0 &&
