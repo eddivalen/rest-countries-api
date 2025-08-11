@@ -6,6 +6,8 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
   
   const handleSearchByCountry = (value) => {
     setSearchByCountry(value);
+    if(!countries || !Array.isArray(countries)) return;
+    
     if(value){
       if(searchByRegion.length > 0 && searchByRegion !== 'All'){
         filterByCountry(value,true);
@@ -23,6 +25,8 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
   }
   const handleSearchByRegion = (value) => {
     setSearchByRegion(value);
+    if(!countries || !Array.isArray(countries)) return;
+    
     if(value === 'All'){
       if(searchByCountry.length > 0){
         filterByCountry(searchByCountry,false);
@@ -40,6 +44,8 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
   }
 
   const filterByCountry = (value, byRegion) => {
+    if(!countries || !Array.isArray(countries)) return;
+    
     if(byRegion){
       const filteredCountries = countries.filter( (country) =>
         country.name.common.toLowerCase().includes(value.toLowerCase()))
@@ -52,6 +58,8 @@ const Filter = ({countries, setFilteredCountries, setSearchByCountry, setSearchB
     }
   }
   const filterByRegion = (value, byCountry) => {
+    if(!countries || !Array.isArray(countries)) return;
+    
     if(byCountry){
       const filteredCountries = countries.filter( (country) =>
         country.name.common.toLowerCase().includes(searchByCountry.toLowerCase()))

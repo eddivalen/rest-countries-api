@@ -22,7 +22,7 @@ const Countries = ({countries}) => {
       <section className='countries'>
         {countries && countries.length > 0 ? countries.map((country) => {
           const { name, population, region, capital, flags, cca2: countryCode} = country;
-          const cap = typeof capital != 'undefined' ? capital[0] : '';
+          const cap = capital && Array.isArray(capital) && capital.length > 0 ? capital[0] : '';
           return (
             <Link to={`/country/${countryCode.toLowerCase()}`} key={countryCode}>
               <article>
@@ -34,7 +34,7 @@ const Countries = ({countries}) => {
                     <h2>{name.common}</h2>
                     <p><span>Population:</span> {population}</p>
                     <p><span>Region:</span> {region}</p>
-                    {cap.length > 0 && <p><span>Capital:</span> {cap}</p>} 
+                    {cap && cap.length > 0 && <p><span>Capital:</span> {cap}</p>} 
                   </div>
                 </div> 
               </article>

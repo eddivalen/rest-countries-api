@@ -24,14 +24,14 @@ function App() {
             <Header/>
             <Routes>
               <Route exact path="/" element={
-                status === "loading" ? 
+                status === "loading" || !countries ? 
                 <>
                   <main role="main" className="container">
                     <Loading/>
                   </main>
                 </>
                 :
-                status === "success" && 
+                status === "success" && countries && 
                 <>
                   <main role="main" className="container">
                       <Filter
